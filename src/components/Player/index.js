@@ -84,7 +84,7 @@ export default function Player (){
             <video
                 ref={$videoPlayer}
                 src={videoURL}
-                poster="http://localhost:3000/videoPreview.jpg"
+                poster="videoPreview.jpg"
                 onTimeUpdate={handleTimeUpdate}
                 loop={true}
                 

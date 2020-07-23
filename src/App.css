@@ -26,7 +26,7 @@
 
 .videoWrapper{
 
-  background-image: url(http://localhost:3000/tv.png);
+  background-image: url(/tv.png);
   background-position: center center;
   background-size: 100% 100%;
   border-radius: 2.2em;
