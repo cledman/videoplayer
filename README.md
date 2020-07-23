@@ -1,15 +1,11 @@
 <p align="center">
-   <img src=".github/logo_videoplayer.png" width="200" alt="logo from VideoPlayer"/>
+   <img src=".github/preview.gif""  alt="Preview from VideoPlayer"/>
 </p>
 
 # VideoPlayer
 
-This player is part of a video from [Mario Souto](https://www.linkedin.com/in/omariosouto/) from [Alura](https://www.alura.com.br/) and consists of a videoplayer made with [React](https://reactjs.org).
+This player is part of a video from [Mario Souto](https://www.linkedin.com/in/omariosouto/) from [Alura](https://www.alura.com.br/) and consists of a videoplayer made with [React](https://reactjs.org). As a challenge, [Mario Souto](https://www.linkedin.com/in/omariosouto/) asked us to implement the Playback Rate on Video Player.
 
-<br />
-<p align="center">
-    <img src=".github/preview.gif"/>
-</p>
 
 ---
 
@@ -24,6 +20,7 @@ This player is part of a video from [Mario Souto](https://www.linkedin.com/in/om
 # Features
 
 *  Users can play and pause vídeos.
+*  **PLUS**: Now users can change the playback rate!
 
 
 # Installation
@@ -48,7 +45,7 @@ This player is part of a video from [Mario Souto](https://www.linkedin.com/in/om
 
 # Future Implementations
 
-*  Users could change playback rate.
+*  Users could change audio volume.
 
 Thanks to [Mario Souto](https://www.linkedin.com/in/omariosouto/) from [Alura](https://www.alura.com.br/).
 ##

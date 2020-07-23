@@ -4,7 +4,8 @@ import './Player.css'
 function usePlayerState($videoPlayer){
     const [playerState, setPlayerState] = useState({
         playing:false,
-        percentage:0
+        percentage:0,
+        playbackrate:1
     })
 
     useEffect( () =>{
@@ -29,7 +30,6 @@ function usePlayerState($videoPlayer){
             ...playerState,
             percentage:currentPercentage
         })
-
     }
 
 
@@ -40,14 +40,26 @@ function usePlayerState($videoPlayer){
        setPlayerState({
             ...playerState,
             percentage:currentPercentageValue
-        })       
+        })  
+    }
+
+    function handlePlaybackRate(event){
+        const currentPlaybackRateValue =event.target.value
+        $videoPlayer.current.playbackRate = currentPlaybackRateValue 
+
+        setPlayerState({
+            ...playerState,
+            playbackrate:currentPlaybackRateValue
+        })  
+        console.log(playerState)      
     }
 
     return {
         playerState,
         toogleVideoPlay,
         handleTimeUpdate,
-        handleChangeVideoPercentage
+        handleChangeVideoPercentage,
+        handlePlaybackRate
     }
 }
 
@@ -62,7 +74,8 @@ export default function Player (){
         playerState,
         toogleVideoPlay,
         handleTimeUpdate,
-        handleChangeVideoPercentage
+        handleChangeVideoPercentage,
+        handlePlaybackRate,
     }  = usePlayerState($videoPlayer)
 
 
@@ -71,24 +84,35 @@ export default function Player (){
             <video
                 ref={$videoPlayer}
                 src={videoURL}
-                poster="https://cdn.dribbble.com/users/2581827/screenshots/13320705/media/3312d4b1007b0abd72ef149ad5b6d05c.gif"
+                poster="http://localhost:3000/videoPreview.jpg"
                 onTimeUpdate={handleTimeUpdate}
+                loop={true}
+                
+                
             />
             <div className="controls">
                 <button onClick={toogleVideoPlay}>
                     { playerState.playing ? "Pause" : "Play"}
                 </button>
+
                 <input
+                    className="slider"
                     type="range"
                     min="0"
                     max="100"
                     onChange={handleChangeVideoPercentage}
                     value={playerState.percentage}
                 />
-                <select>
-                    {[1,2,3].map(speed =>(
+                <label for="playbackrate">Speed:</label>
+                <select 
+                    className="playbackRate"
+                    name="playbackrate"
+                    onChange={handlePlaybackRate}
+                >
+                    {[1,0.1,0.5,2].map(speed =>(
                         <option
                             key={`speedChange_${speed}`}
+                            value={speed}
                         >
                            {speed}     
                         </option>

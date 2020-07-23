@@ -1,38 +1,108 @@
 .App {
+  font-family: 'Lobster', cursive;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: center;  
+  background-color: #72bcd9;
+  color: white;  
+  display: flex;  
+  flex-direction: column; 
   font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: center;
+  min-height: 100vh;  
+
+  background: rgba(114,188,217,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(114,188,217,1) 0%, rgba(99,169,195,1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(114,188,217,1)), color-stop(100%, rgba(99,169,195,1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(114,188,217,1) 0%, rgba(99,169,195,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(114,188,217,1) 0%, rgba(99,169,195,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(114,188,217,1) 0%, rgba(99,169,195,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(114,188,217,1) 0%, rgba(99,169,195,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#72bcd9', endColorstr='#63a9c3', GradientType=1 );  
 }
 
-.App-link {
-  color: #61dafb;
+.videoWrapper{
+
+  background-image: url(http://localhost:3000/tv.png);
+  background-position: center center;
+  background-size: 100% 100%;
+  border-radius: 2.2em;
+  display: block;
+  margin:0.2em;  
+  padding: 2.3em;
+
+-webkit-box-shadow: 0px 20px 60px 0px rgba(81, 130, 137, 0.83);
+-moz-box-shadow:    0px 20px 60px 0px rgba(81, 130, 137, 0.83);
+box-shadow:         0px 20px 60px 0px rgba(81, 130, 137, 0.83);
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+video{
+  border-radius: 1em;
+  display: inline;
+  min-height:10vh;
+  width: 100%;
+  
+  -webkit-box-shadow: 0px 20px 60px 0px rgba(102, 93, 89, 0.83);
+  -moz-box-shadow:    0px 20px 60px 0px rgba(102, 93, 89, 0.83);
+  box-shadow:         0px 20px 60px 0px rgba(102, 93, 89, 0.83);
+  
+  
+  
+}
+
+.controls{
+  display: block;
+  margin-top: 1em;  
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.controls button,
+.playbackRate {
+  background-color: #38261a;
+  border: none;
+  border-radius: 2em;
+  color: azure;
+  font-family: 'Lobster', cursive;
+  font-size: 0.7em;
+  margin:0.2em;
+  padding: 1em;
+
+  -webkit-box-shadow: inset 3px 3px 12px -6px rgba(46,41,38,1);
+  -moz-box-shadow: inset 3px 3px 12px -6px rgba(46,41,38,1);
+  box-shadow: inset 3px 3px 12px -6px rgba(46,41,38,1);
+}
+.controls input{
+  display: inline;
+  height:1vh;
+}
+.controls a,
+.controls a:link,
+.controls a:focus{
+  text-decoration: none;
+}
+
+.controls label{
+  display: inline;
+  font-size: 0.8em;
+  padding-left: 0.6em;
+  padding-right: 0.3em;  
+}
+
+.slider{
+  appearance: none;
+  background: #6b6361; 
+  border-radius: 0.2em;
+  outline: none; 
+  opacity: 0.7; 
+  width: 50%;   
+  -webkit-appearance: none;    
+}
+.playbackRate {
+  padding: 0.4em;
 }
