@@ -42,7 +42,7 @@ This player is part of a video from [Mario Souto](https://www.linkedin.com/in/om
 
 **Run the application in a development environment:**
 
-```npm run dev```
+```npm start```
 
 # Technologies
 
