@@ -1,7 +1,7 @@
 import React, {useState, useRef, useEffect} from 'react'
 import './Player.css'
 
-function usePlayerState($videoPlayer){
+const usePlayerState = ($videoPlayer) =>{
     const [playerState, setPlayerState] = useState({
         playing:false,
         percentage:0,
@@ -16,7 +16,7 @@ function usePlayerState($videoPlayer){
     ])
 
 
-    function toogleVideoPlay (){
+    const toogleVideoPlay = () =>{
         setPlayerState({
             ...playerState,
             playing:!playerState.playing
@@ -24,7 +24,7 @@ function usePlayerState($videoPlayer){
     }
 
     
-    function handleTimeUpdate() {
+    const handleTimeUpdate =() =>{
         const currentPercentage = ($videoPlayer.current.currentTime / $videoPlayer.current.duration) *100
         setPlayerState({
             ...playerState,
@@ -33,7 +33,7 @@ function usePlayerState($videoPlayer){
     }
 
 
-    function handleChangeVideoPercentage(event){
+    const handleChangeVideoPercentage = (event) =>{
         const currentPercentageValue = event.target.value
         $videoPlayer.current.currentTime = $videoPlayer.current.duration / 100 * currentPercentageValue
 
@@ -43,7 +43,7 @@ function usePlayerState($videoPlayer){
         })  
     }
 
-    function handlePlaybackRate(event){
+    const handlePlaybackRate = (event) =>{
         const currentPlaybackRateValue =event.target.value
         $videoPlayer.current.playbackRate = currentPlaybackRateValue 
 
@@ -62,9 +62,6 @@ function usePlayerState($videoPlayer){
         handlePlaybackRate
     }
 }
-
-
-
 
 
 const videoURL="https://instagram.fmea2-1.fna.fbcdn.net/v/t50.2886-16/106034683_751400472327251_3805287395436138923_n.mp4?_nc_ht=instagram.fmea2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=8TjvEvjPQ3UAX9j-SI_&oe=5F1A4C92&oh=0eaed3d4e7768f6eeeb53fc47dc1c562"
@@ -91,7 +88,8 @@ export default function Player (){
                 
             />
             <div className="controls">
-                <button onClick={toogleVideoPlay}>
+                <button 
+                    onClick={toogleVideoPlay}>
                     { playerState.playing ? "Pause" : "Play"}
                 </button>
 
@@ -103,7 +101,8 @@ export default function Player (){
                     onChange={handleChangeVideoPercentage}
                     value={playerState.percentage}
                 />
-                <label for="playbackrate">Speed:</label>
+                <label 
+                    for="playbackrate">Speed:</label>
                 <select 
                     className="playbackRate"
                     name="playbackrate"
