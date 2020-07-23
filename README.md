@@ -4,7 +4,7 @@
 
 # VideoPlayer
 
-This player is part of a video from [Mario Souto](https://www.linkedin.com/in/omariosouto/) from [Alura](https://www.alura.com.br/) and consists of a videoplayer made with [React](https://reactjs.org). As a challenge, [Mario Souto](https://www.linkedin.com/in/omariosouto/) asked us to implement the Playback Rate on Video Player.
+This player is part of a video from [Mario Souto](https://www.linkedin.com/in/omariosouto/) from [Alura](https://www.alura.com.br/) and consists on a videoplayer made with [React](https://reactjs.org). As a challenge, [Mario Souto](https://www.linkedin.com/in/omariosouto/) asked us to implement the Playback Rate on Video Player.
 
 **PS**: This video is from a game that I´m working on. If you like it, please, follow me on:
 
