@@ -8,7 +8,7 @@ This player is part of a video from [Mario Souto](https://www.linkedin.com/in/om
 
 **PS**: This video is from a game that I´m working on. If you like it, please, follow me on:
 
-* [Behance](https://www.behance.net/)
+* [Behance](https://www.behance.net/cledman)
 * [Instagram](https://www.instagram.com/cledman.art/)
 * [Dribbble](https://dribbble.com/cledman)
 * [DeviantArt](https://www.deviantart.com/cledman)
